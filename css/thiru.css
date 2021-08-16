@@ -22,7 +22,10 @@ header
 .fixed-bottom{
   height: 10%;
 }
-
+.hero{
+  margin-top: 40px;
+  position: relative;
+}
 
 .icon{
   padding: 5px;
@@ -55,7 +58,7 @@ header .logo
 }
 
 .content-text{
-  padding-top: 250px;
+  padding-top:200px;
   position: relative;
   color:#fff;
   text-align: center;
@@ -77,7 +80,7 @@ header .logo
 .place{
   background-color: white;
   color: black;
-  font-size: 5vw; /* Responsive font size */
+  font-size: 2vw; /* Responsive font size */
   font-weight: bold;
   margin: 0 auto; /* Center the text container */
   padding: 10px;
@@ -120,7 +123,9 @@ body {
 
 .main{
   max-width: 1200px;
-  margin: 0px;
+  margin: 40px;
+  padding-top: ;
+  position: relative;
 }
 
 h1 {
