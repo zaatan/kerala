@@ -93,6 +93,7 @@ header .logo
   padding-left: 150px;
   padding-right: 150px;
 }
+/* carausel */
 /* cards */
 /* Font */
 @import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
@@ -119,7 +120,7 @@ body {
 
 .main{
   max-width: 1200px;
-  margin: 088px;
+  margin: 0px;
 }
 
 h1 {
