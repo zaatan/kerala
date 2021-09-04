@@ -7,15 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>KTDC-Login</title>
 
-      <link rel = "icon" href = 
-"images/pngwing.com.png" 
-        type = "image/x-icon">
+    <link rel="icon" href="images/pngwing.com.png" type="image/x-icon">
 
     <link href="css/login.css" type="text/css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
-
+    <script src="https://kit.fontawesome.com/3c2b9b6e38.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -65,43 +63,62 @@
 
         <!-- Model HTML -->
 
-        
 
-            <div
-                class="modal-dialog modal-login 4">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <div class="avatar"><i class="material-icons">
-                                &#xE7FD;
-                                <img src="images/pngwing.com.png" alt="" width="60" height="50">
-                            </i></div>
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    </div>
-                    <div class="modal-body">
-                        <form action="#" method="post">
-                            <div class="form-group">
-                                <input type="email" class="form-control" placeholder="email" required="required">
-                            </div>
-                            <div class="form-group">
-                                <input type="password" class="form-control" placeholder="Password" required="required">
-                            </div>
-                            <div class="form-group">
-                                <input type="submit" class="btn btn-primary btn-block btn-lg" value="Login">
-                            </div>
-                        </form>
-                        <div class="hint-text small"><a href="signup.html">Dont have an
-                                account please Signup</a></div>
-                        <div class="hint-text small"><a href="#">Forgot Your Password?</a></div>
-                    </div>
+
+        <div class="modal-dialog modal-login 4">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="avatar"><i class="material-icons">
+                            &#xE7FD;
+                            <img src="images/pngwing.com.png" alt="" width="60" height="50">
+                        </i></div>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form action="index.html" onclick="return validate()">
+                        <div class="form-group row">
+                            <input type="email" class="form-control col-sm-11" onkeyup="validate1()"
+                            placeholder="email" id="email">
+                            <i style="color: lightgreen;" id="tick1" hidden="true"
+                                class="fas fa-check-circle col-sm-1"></i>
+                            <i style="color: red;" id="mistake1" hidden="true" class="fas fa-times col-sm-1"></i>
+                            <span> <label for="error1" input type="error" id="error1"></label></span>
+                        </div>
+
+
+
+                        <div class="form-group row">
+                            <input type="password" class="form-control col-sm-11" onkeyup="validate2()"
+                            placeholder="Password" id="pwd">
+                            <i style="color: lightgreen;" id="tick2" hidden="true"
+                            class="fas fa-check-circle col-sm-1"></i>
+                        <i style="color: red;" id="mistake2" hidden="true" class="fas fa-times col-sm-1"></i>
+                        <span> <label for="error2" input type="error" id="error2"></label></span>
+                    
+
+                        </div>
+
+
+
+
+                        
+                        <div class="form-group">
+                            <input type="submit" class="btn btn-primary btn-block btn-lg" value="Login">
+                        </div>
+                    </form>
+                    <div class="hint-text small"><a href="signup.html">Dont have an
+                            account please Signup</a></div>
+                    <div class="hint-text small"><a href="#">Forgot Your Password?</a></div>
                 </div>
             </div>
+        </div>
 
-        
+
 
         <!-- asulksd -->
 
-        
-        
+
+
         <ul class="social">
             <li>
                 <a href="https://www.facebook.com/keralatourismofficial/"><img
@@ -126,6 +143,7 @@
             <li><a href="#">Contact</a></li>
         </ul>
     </div>
+    <script src="login.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
         crossorigin="anonymous"></script>

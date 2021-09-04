@@ -127,182 +127,161 @@ header .logo
     font-size: 2em;
   }
 }
-/* signup */
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
-
+/* login page css */
+/* style */
+.height{
+  align-items: center;
+  margin-left: 30%;
+}
 body {
-  background: rgb(166,192,254);
-  background: linear-gradient(150deg, rgba(166,192,254,1) 0%, rgba(246,128,132,1) 100%);
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  color: white;
-  font-family: "Inter", sans-serif;
-  margin: 0;
-  padding: 0;
+  font-family: 'Varela Round', sans-serif;
 }
 
-.main-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  width: 100%;
-  margin-top: 1rem
-
+.form-control {
+  box-shadow: none;
+  border-color: #ddd;
 }
 
-.smooth{
-  position: ;
-}
-.container{
-  position: relative;
-  margin-top: auto;
+.form-control:focus {
+  border-color: #FB6E9D;
+  box-shadow: 0 0 8px rgba(251, 110, 157, 0.4);
 }
 
-.content__input--form {
-  display: flex;
-  flex-direction: column;
+.modal-login {
+  color: #434343;
+  width: 350px;
+  margin: 30px auto;
 }
 
-.content__input--form > label > input {
-  box-sizing: border-box;
-  font-family: "Inter";
-  width: 300px;
-  height: 40px;
-  margin-bottom: 30px;
-  padding-left: 20px;
+.modal-login .modal-content {
+  padding: 20px;
+  border-radius: 1px;
   border: none;
-  border-radius: 13px;
-  background-color: rgba(255, 255, 255, 0.4);
-  color: white;
-  outline: none;
+  position: relative;
 }
 
-.content__input--form > label > input::placeholder {
-  color: white;
-  font-size: 14px;
+.modal-login .modal-header {
+  border-bottom: none;
 }
 
-.content__submit > .button {
-  height: 40px;
-  width: 300px;
-  border: none;
-  border-radius: 13px;
-  margin-bottom: 30px;
-  font-family: "Inter";
-  font-weight: bold;
-  font-size: 14px;
-}
-
-.content__submit > .google-button {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  background-color: #4385F5;
-  color: white;
-  overflow: hidden;
-}
-
-.google-button__google-icon {
-  background-color: white;
-  background-image: url("https://img.icons8.com/color/50/000000/google-logo.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 35px;
-  height: 100%;
-  width: 20%;
-  margin-right: 30px;
-  cursor: pointer;
-}
-
-.no-select {
-    -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Old versions of Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome, Edge, Opera and Firefox */
-}
-
-.content__submit--line {
-  width: 60%;
-  height: 1px;
-  background-color: white;
-}
-
-.content__submit > p, .content__footer p {
-  font-weight: 200;
-}
-
-.content__footer p {
-  font-size: 13px;
+.modal-login h4 {
   text-align: center;
+  font-size: 22px;
+  margin-bottom: -10px;
 }
 
-a {
-  text-decoration: none;
-  color: white;
+.modal-login .avatar {
+  color: #fff;
+  margin: 0 auto;
+  text-align: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  z-index: 9;
+  background: #9ceb52d6;
+  padding: 15px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
 }
 
-@media screen and (max-width: 800px) {
-  .main-container {
-    margin: 20px 20px;
-  }
-
-  .content__input--form {
-    margin-top: 80px;
-    align-items: center;
-  }
-
-  .content__submit {
-    margin-top: 60px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
- 
-  .content__footer {
-    margin-top: 100px;
-  }
+.modal-login .avatar i {
+  font-size: 0;
 }
 
-@media screen and (min-width: 801px) {
+.modal-login .form-control,
+.modal-login .btn {
+  min-height: 40px;
+  border-radius: 1px;
+  transition: all 0.5s;
+}
 
-  .main-container__content {
-    margin-top: 5%;
+.modal-login .hint-text {
+  text-align: center;
+  padding-top: 10px;
+}
+
+.modal-login .close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.modal-login .btn {
+  background: #1fd13cd6;
+  border: none;
+  line-height: normal;
+}
+
+.modal-login .btn:hover,
+.modal-login .btn:focus {
+  background: #fb3c7a;
+}
+
+.modal-login .hint-text a {
+  color: #999;
+}
+
+.trigger-btn {
+  display: inline-block;
+  margin: 100px auto;
+}
+
+/* style password */
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
     box-sizing: border-box;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    width: 90%;
-    height: 400px;
-    padding: 5%;
-  }
-  
-  .content__inputs {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    height: 100%;
-    transform: translate(0, 5%);
-  }
-  
-  .content__submit {
-    width: 50%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-left: 1px solid white;
-  }
-  
-  .content__footer {
-    width: 90%;
-  }
+    margin-top: 6px;
+    margin-bottom: 16px;
+}
+
+/* Style the submit button */
+input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+}
+
+/* Style the container for inputs */
+.container {
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+
+/* The message box is shown when the user clicks on the password field */
+#message {
+    display: none;
+    background: #f1f1f1;
+    color: #000;
+    position: relative;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+#message p {
+    padding: 10px 35px;
+    font-size: 18px;
+}
+
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+    color: green;
+}
+
+.valid:before {
+    position: relative;
+    left: -35px;
+    content: "\2714";
+}
+
+/* Add a red text color and an "x" icon when the requirements are wrong */
+.invalid {
+    color: red;
+}
+
+.invalid:before {
+    position: relative;
+    left: -35px;
+    content: "\2716";
 }
