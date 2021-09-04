@@ -84,7 +84,7 @@
                     <form action="index.html" onclick="return validate()">
                         <div class="form-group row">
                             <div class="form-group row">
-                                <input type="text" class="form-control col-sm-11" placeholder="name" id="name">
+                                <input type="text" class="form-control col-sm-11" placeholder="name" id="name" onkeyup="name1()">
                                 <i style="color: lightgreen;" id="tick" hidden="true"
                                     class="fas fa-check-circle col-sm-1"></i>
                                 <i style="color: red;" id="mistake" hidden="true" class="fas fa-times col-sm-1"></i>
@@ -113,7 +113,7 @@
 
 
                                 <input type="text" class="form-control col-sm-11" onkeydown="validate3(this.value)"
-                                    placeholder="mobile number" id="number1">
+                                    placeholder="Mobile number" id="number1">
 
                                 <i style="color: lightgreen;" id="tick2" hidden="true"
                                     class="fas fa-check-circle col-sm-1"></i>

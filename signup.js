@@ -7,6 +7,11 @@ var special=document.getElementById("special");
 var weak= document.getElementById("weak");
 var medium=document.getElementById("medium");
 var strong=document.getElementById("strong");
+var nam=document.getElementById("name");
+var tick=document.getElementById("tick");
+var mistake=document.getElementById("mistake");
+
+
 let regex = /^(?=.*?[A-Z])(?=(.*[a-z]){1,})(?=(.*[\d]){1,})(?=(.*[\W]){1,}).{8,}$/;
 let regex1=/^[A-Za-z0-9\!\@\#\$\%\^\&\*\)\(+\=\._-]+$/;
 
@@ -148,7 +153,7 @@ function validate1() {
     else {
         error1.innerHTML = "invalid email format";
         error1.style.color = "red";
-        email.style.borderColor = "red";
+        email.style.borderColor = "";
         x1.removeAttribute("hidden", "true");
         tick1.setAttribute("hidden", "true");
         return false;
@@ -171,7 +176,7 @@ function validate3() {
     else {
         error2.innerHTML = "phone number is not valid";
         error2.style.color = "red";
-        number1.style.borderColor = "red";
+        number1.style.borderColor = "";
         x2.removeAttribute("hidden", "true");
         tick2.setAttribute("hidden", "true");
 
@@ -179,8 +184,28 @@ function validate3() {
     }
 }
 
+
+
+function name1(){
+    if (nam.value.trim().length >= 5){
+        error.innerHTML="valid";
+        error.style.color="green"
+        console.log("dr baaaa");
+        tick.removeAttribute("hidden", "true");
+        mistake.setAttribute("hidden", "true");
+        return true;
+    } 
+    else{
+        error.innerHTML="Name should have atleast 5 lettrs ";
+        error.style.color="red";
+        tick.setAttribute("hidden", "true");
+        mistake.removeAttribute("hidden", "true");
+        return false;
+    }
+
+}
 function validate(){
-    if(validate1() && validate3() ) {
+    if(validate1() && validate3() && name1()) {
         return true;
     } else {
        
