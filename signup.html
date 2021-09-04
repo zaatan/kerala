@@ -84,7 +84,8 @@
                     <form action="index.html" onclick="return validate()">
                         <div class="form-group row">
                             <div class="form-group row">
-                                <input type="text" class="form-control col-sm-11" placeholder="name" id="name" onkeyup="name1()">
+                                <input type="text" class="form-control col-sm-11" placeholder="name" id="name"
+                                    onkeyup="name1()">
                                 <i style="color: lightgreen;" id="tick" hidden="true"
                                     class="fas fa-check-circle col-sm-1"></i>
                                 <i style="color: red;" id="mistake" hidden="true" class="fas fa-times col-sm-1"></i>
@@ -112,7 +113,7 @@
                             <div class="form-group row">
 
 
-                                <input type="text" class="form-control col-sm-11" onkeydown="validate3(this.value)"
+                                <input type="text" class="form-control col-sm-11" onkeyup="validate3(this.value)"
                                     placeholder="Mobile number" id="number1">
 
                                 <i style="color: lightgreen;" id="tick2" hidden="true"
@@ -129,8 +130,7 @@
                             <div class="form-group row">
 
                                 <input type="password" placeholder="Password" class="form-control col-sm-11" id="psw"
-                                    name="psw" 
-                                    onkeyup="sandeep(this.value)"
+                                    name="psw" onkeyup="sandeep(this.value)"
                                     title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters">
                                 <i style="color: lightgreen;" id="tick2" hidden="true"
                                     class="fas fa-check-circle col-sm-1"></i>
@@ -169,15 +169,17 @@
 
 
                                 <div class="form-group">
-                                    <input type="submit" id="enablebtn" class="btn btn-primary btn-block btn-lg" value="Signup">
+                                    <input type="submit" id="enablebtn" class="btn btn-primary btn-block btn-lg"
+                                        value="Signup">
                                 </div>
+                            </div>
                     </form>
-                   
 
-                    <div class="hint-text small"><a href="#">Forgot Your Password?</a></div>
                 </div>
-
+                <div class="hint-text small"><a href="#">Forgot Your Password?</a></div>
             </div>
+
+        </div>
         </div>
         </div>
         <script>

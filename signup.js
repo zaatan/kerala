@@ -13,10 +13,10 @@ var mistake=document.getElementById("mistake");
 
 
 let regex = /^(?=.*?[A-Z])(?=(.*[a-z]){1,})(?=(.*[\d]){1,})(?=(.*[\W]){1,}).{8,}$/;
-let regex1=/^[A-Za-z0-9\!\@\#\$\%\^\&\*\)\(+\=\._-]+$/;
+let regex1=/^[\!\@\#\$\%\^\&\*\)\(+\=\._-]+$/;
 
     let regexp2 = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.]{2,4})+\.([A-Za-z]{2,3})$/;;
-    let regEx3 = /^\(?(\d{3})\)?[-\. ]?(\d{3})[-\. ]?(\d{3})$/;
+    let regEx3 = /^\(?(\d{3})\)?[-\. ]?(\d{3})[-\. ]?(\d{4})$/;
 
 
     var email = document.getElementById("email");
@@ -25,9 +25,9 @@ var tick1 = document.getElementById("tick1");
 var x1 = document.getElementById("mistake1");
 
 var number1 = document.getElementById("number1");
-        var tick1 = document.getElementById("tick2");
-        var x1 = document.getElementById("mistake2");
-        var error1 = document.getElementById("error2");
+        var tick2 = document.getElementById("tick2");
+        var x2 = document.getElementById("mistake2");
+        var error2 = document.getElementById("error2");
 
         var button=document.getElementById("enablebtn");
         button.disabled=true;
@@ -162,6 +162,7 @@ function validate1() {
     }
 }
 function validate3() {
+
     // let regEx = /^\(?(\d{3})\)?[-\. ]?(\d{3})[-\. ]?(\d{3})$/;
     if (regEx3.test(number1.value)) {
         error2.innerHTML = "valid";
@@ -176,7 +177,7 @@ function validate3() {
     else {
         error2.innerHTML = "phone number is not valid";
         error2.style.color = "red";
-        number1.style.borderColor = "";
+        number1.style.borderColor = "red";
         x2.removeAttribute("hidden", "true");
         tick2.setAttribute("hidden", "true");
 
